@@ -1,0 +1,251 @@
+//programOne
+package Pakage1;
+
+public class Person {
+	
+	String name;
+	int age;
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person obj = new Person();
+		Person obj1 = new Person("akshara");
+		Person obj2 = new Person(2);
+		Person obj3 = new Person("akshuma", 2);
+	}
+	public Person() {
+		System.out.println("This is my Constructor");
+		
+	}
+	public Person(String name) {
+		System.out.println(name);
+	}
+	public Person(int age) {
+		System.out.println(age);
+	}
+	public Person(String name, int age) {
+		System.out.println("Name: " + name +  ", age: " + age + " ");
+	}
+}
+
+
+//programtwo
+package Pakage1;
+
+public class Employee {
+//		String firstName;
+//		String lastName;
+		int value;
+		int salary = 20000;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee obj = new Employee(20);
+		System.out.println(obj);
+		int id = obj.getId(); 
+		System.out.println(id);
+		String firstName = obj.getFirstName();
+		System.out.println(firstName);
+		String lastName = obj.getLastName();
+		System.out.println(lastName);
+		String name = obj.name();
+		System.out.println(name);
+		obj.setSalary();
+		int annualSalary = obj.AnnualSalary();
+		System.out.println(annualSalary);
+		int increaseSalary = obj.raiseSalary();
+		System.out.println(increaseSalary);
+		
+		
+	}
+	//construtor
+	public Employee(int val) {
+	this.value = val;
+	}
+	public String toString() {
+		
+		return "Employee{value=" +value+ '}';
+	}
+	public int getId() {
+		int idValue = 548825;
+		return idValue;
+	}
+	public String getFirstName() {
+		String firstNameVal = "akshara";
+		return firstNameVal;
+	}
+	public String getLastName() {
+		String lasttNameVal = "aswin";
+		return lasttNameVal;
+	}
+	public String name() {
+		String firstName = "akshara";
+		String lastName = "aswin";
+		String name = firstName + lastName;
+		return(name);
+	}
+	public void setSalary() {
+		this.salary = 30000;
+		System.out.println(this.salary);
+	}
+	public int getSalary() {
+		return this.salary;
+	}
+	public int AnnualSalary() {
+		salary = salary*2;
+		return (salary);
+	}
+	public int raiseSalary() {
+		  	System.out.println(salary);
+	        int increase = 50; //Percentage increase
+	        salary = salary + (salary * increase) / 100;
+
+	        //Print the increased salary
+	        System.out.println("The increased salary is: " + salary);
+	        return(salary);
+	}
+	
+}
+
+
+//programThree
+package Pakage1;
+
+public class Circle {
+	int radius = 55;
+	double circumstance;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Circle obj = new Circle();
+		Circle obj1 = new Circle(10, 10);
+		obj.circumstance();
+		
+	}
+	public Circle() {
+		System.out.println("This is my no argument constructor");
+	}
+	public Circle(int a, int b) {
+		int x = a+b;
+		System.out.println("This is x value: " + x + " with two argument constructor");
+	}
+	public void circumstance() {
+		this.circumstance = Math.PI*2*radius;
+		System.out.println(circumstance);
+	}
+
+}
+
+//program four
+package Pakage1;
+
+public class Account {
+	int balance = 50000;
+	int withdraw, deposit;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Account act = new Account();
+		Account act1 = new Account(25000, 5000);
+		act.deposit();
+		act.withdraw();
+	}
+	public Account() {
+		System.out.println("This is my no argument constructor");
+	}
+	public Account(int a, int b) {
+		withdraw = a;
+		deposit = b;
+		System.out.println("This is the withdraw value: " + withdraw + " and this is the deposit value: " + deposit + " .");
+	}
+	public void deposit() {
+		balance += 25000;
+		System.out.println(balance);
+	}
+	public void withdraw() {
+		balance -= 5000;
+		System.out.println(balance);
+	}
+}
+
+
+//programFive
+package Pakage1;
+
+public class Tea {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Tea teaobj = new Tea();
+		teaobj.prepareTea();
+		teaobj.addMilk();
+		teaobj.addSugar();
+	}
+	public void prepareTea() {
+		System.out.println("A method that preapres a Tea using hot water and milk");
+	}
+	public void addMilk() {
+		System.out.println("A method that adds a milk");
+	}
+	public void addSugar() {
+		System.out.println("A method that adds a sugar");
+	}
+
+}
+
+
+//programSix
+package Pakage1;
+
+public class GreenTea extends Tea{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GreenTea objgreen = new GreenTea();
+		objgreen.prepareTea();
+		objgreen.addMilk();
+		objgreen.addSugar();
+
+	}
+	public void prepareTea() {
+		System.out.println("A method that prepares a GreenTea");
+	}
+
+}
+
+
+//prgramSeven
+package Pakage1;
+
+public class HerbalTea extends Tea{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HerbalTea objherbal = new HerbalTea();
+		objherbal.prepareTea();
+		objherbal.addMilk();
+		objherbal.addSugar();
+	}
+	public void prepareTea() {
+		System.out.println("A method that prepares a HerbalTea");
+	}
+	
+
+}
+
+//programEight
+package Pakage1;
+
+public class BlackTea extends Tea {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BlackTea objblack = new BlackTea();
+		objblack.prepareTea();
+		objblack.addMilk();
+		objblack.addSugar();
+		
+		}
+	public void prepareTea() {
+		System.out.println("A method that prepares a BlackTea");
+	}
+	
+}
