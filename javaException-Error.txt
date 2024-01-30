@@ -1,0 +1,153 @@
+//QuesOne:
+ Java offers four primary access modifiers: default, private, protected, and public.
+
+The default modifier allows access within the same package, while private restricts access to the class itself. Protected extends access to subclasses as well, fostering controlled inheritance. Public, on the other hand, opens the gates for everyone.
+
+//QueTwo
+The main difference between errors and exceptions in programming is that errors are critical issues that halt the program, whereas exceptions are anomalies that can be handled by the program.
+
+//QueThree
+Checked exceptions: Occur at compile time when the source code is converted into executable code
+Unchecked exceptions: Occur at runtime when the executable program starts running 
+Checked exceptions must be handled by re-throwing or with a try catch block. Unchecked exceptions are not required to be handled.
+
+//ALL Exception:
+package Pakage1;
+
+public class AllException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AllException obj = new AllException();
+		obj.method();
+
+	}
+public void method() {
+	int arr[] = new int[2];
+	arr[0] = 1;
+	arr[1] = 2;
+	try {
+		System.out.println(arr[2]);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} //ArrayIndexOutOfBoundsException
+	String str = null;
+	try {
+		System.out.println(str.length());
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} //NullPointerException
+	String s = "akshara06";
+	int val = Integer.parseInt(s); //NumberFormatException
+	try {
+		System.out.println(val);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	System.out.println("----End of the program-------");
+	
+}
+}
+
+//Incorrect password
+package Pakage1;
+
+public class PasswordException extends Exception{
+
+	public PasswordException(String str){
+		super(str);
+		
+	}
+	public void passwordMethod(String s) {
+		try {
+		if(s.length() > 9) {
+			throw new PasswordException("Please enter a valid paaword");
+		}
+		else {
+			System.out.println("Entered password is valid");
+		}
+		}
+		catch(PasswordException e){
+			e.printStackTrace();
+		}
+		
+	}
+
+}
+
+//InvalidAge
+
+//parent class
+package Pakage1;
+
+public class NewException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyownException obj = new MyownException("Exception Test");
+		obj.MyownMethod(2);
+	}
+
+}
+
+
+//child class
+package Pakage1;
+
+public class MyownException extends Exception{
+
+	
+	public MyownException(String str) {
+		super(str);
+	}
+	public void MyownMethod(int age) {
+		try {
+		if(age > 18) {
+			System.out.println("The entered age limit " +age + " is valid");
+		}
+		else {
+			throw new MyownException("InvalidAgeException");
+		}
+		}
+		catch (MyownException e){
+			e.printStackTrace();
+			
+		}
+	}
+}
+
+//FileNotFound Exception
+package Pakage1;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class FileException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileException obj = new FileException();
+		try {
+			obj.filehandling();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	public void filehandling()throws Exception {
+		FileInputStream instream  = new FileInputStream("C:\\Users\\548825\\OneDrive - Cognizant\\Desktop\\test.txt");
+		Properties prop = new Properties();
+		prop.load(instream);
+		String value = prop.getProperty("name");
+		System.out.println(value);
+		
+	}
+}
+
+
+
