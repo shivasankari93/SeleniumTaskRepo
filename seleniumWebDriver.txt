@@ -1,0 +1,84 @@
+//QuestionOne
+Selenium IDE, Selenium WebDriver, and Selenium Grid are all tools used for web application testing:
+Selenium IDE
+A record/run tool that allows developers to develop Selenium test cases. It's an open-source test automation tool that can record and playback actions on the web.
+Selenium WebDriver
+A web framework that allows users to execute cross-browser tests. It's a collection of open-source APIs that can automate the testing of a web application.
+Selenium Grid
+A smart proxy server that allows users to run tests in parallel on multiple machines. It's an advanced testing framework that helps developers and testers perform tests across various web browsers and platforms simultaneously. 
+//QuestionTwo
+Selenium is an open-source testing tool that allows developers and testers to write automated tests for web applications. Selenium tests can be run on many different browsers and operating systems. 
+//QuestionThree
+Selenium WebDriver is an interface that defines a set of methods. The browser specific classes provide the implementation. Some of the implementation classes are: 
+AndroidDriver, ChromeDriver, FirefoxDriver, InternetExplorerDriver, IPhoneDriver, SafariDriver. 
+
+//ProgramOne
+package util;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BrowserDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	    WebDriver driver=new ChromeDriver(); 
+	    driver.manage().window().maximize();
+	    driver.get("https://www.google.com");
+	    System.out.println(driver.getTitle());
+	    driver.findElement(By.xpath("//textarea[@class=\"gLFyf\"]")).sendKeys("Selenium Browser Driver");
+	    try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    driver.findElement(By.xpath("//input[@class=\"gNO89b\"]")).click();
+	    try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    driver.close();
+	    
+	    
+	}
+
+}
+//program Two
+package util;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BrowserDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	    WebDriver driver=new ChromeDriver(); - //WebDriver is a interface new ChromeDriver where obj is created for chromeDriver
+	    driver.manage().window().maximize(); - //maximize the window
+	    driver.get("https://www.google.com"); - // driver will get the mention link and open it in chrome browser
+	    System.out.println(driver.getTitle()); - // get title of the current page 
+	    driver.findElement(By.xpath("//textarea[@class=\"gLFyf\"]")).sendKeys("Selenium Browser Driver");
+	    try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    driver.findElement(By.xpath("//input[@class=\"gNO89b\"]")).click();
+	    try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    driver.close();
+	    
+	    
+	}
+
+}
