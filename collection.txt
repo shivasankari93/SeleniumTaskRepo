@@ -1,0 +1,136 @@
+//ProgramOne
+//package com.example.hr extends employee
+package com.example.hr;
+
+public class Employee {
+	public String name = null;
+	public int id;
+	public double salary;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Employee obj = new Employee();
+		obj.printName("akshara");
+		obj.printSalary(2000);
+
+	}
+	public void printName(String s) {
+		System.out.println(s);
+	}
+	public void printSalary(double x) {
+		System.out.println(x);
+		
+	}
+}
+
+
+//ProgramTwo
+//package com.example.hr.tes extends employeetest
+package com.example.hr;
+
+public class Employee {
+	public String name = null;
+	public int id;
+	public double salary;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Employee obj = new Employee();
+		obj.printName("akshara");
+		obj.printSalary(2000);
+
+	}
+	public void printName(String s) {
+		System.out.println(s);
+	}
+	public void printSalary(double x) {
+		System.out.println(x);
+		
+	}
+}
+
+
+//ProgramThree
+//ArrayList
+package Pakage1;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> listobj = new ArrayList<String>();
+		listobj.add("ammu");
+		listobj.add("akshara");
+		listobj.add("maha");
+		listobj.add("achu");
+		System.out.println(listobj);
+		System.out.println(listobj.size());
+		listobj.removeAll(listobj);
+		System.out.println(listobj);
+	}
+
+}
+
+//ProgramFour
+//TreeMap
+package Pakage1;
+
+import java.util.Arrays;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Collectionap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map<Integer,String> mapobj = new TreeMap<Integer,String>();
+        mapobj.put(01, "siva");
+        mapobj.put(02, "maha");
+        mapobj.put(03, "akshara");
+        System.out.println(mapobj.size());
+        mapobj.remove(01);
+        System.out.println(mapobj.size());
+        for(Map.Entry<Integer, String> i : mapobj.entrySet()) {
+        	System.out.println(i.getValue());
+        	System.out.println(i.getKey());
+        	System.out.println(i);
+        	
+        	
+        }
+        
+	}
+
+}
+
+//ProgramFive
+//ListToArray
+package Pakage1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListtoArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> listobj = new ArrayList<Integer>();
+		listobj.add(2);
+		listobj.add(3);
+		listobj.add(4);
+		listobj.add(5);
+		int arr[] = new int[listobj.size()];
+		for(int i=0; i<listobj.size(); i++) {
+//System.out.println(listobj.get(i));
+			arr[i] = listobj.get(i);
+			System.out.println(arr[i]);
+		}
+		
+		
+	}
+
+}
