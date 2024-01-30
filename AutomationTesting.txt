@@ -1,0 +1,13 @@
+//QuestionOne
+The difference between manual testing and automated testing is that in manual testing, you perform the tests step by step without the help of tools, whereas in automated testing, tests are executed automatically using automation tools & frameworks.
+//QuestioTwo
+Selenium: An open-source tool that supports Windows, Mac, and Linux, and languages like Java, Python, C#, Ruby, Javascript, and Kotlin.
+BrowserStack Automate: Allows users to use a variety of automation frameworks and tools, such as Cypress, Selenium, Puppeteer, Appium, and Playwright.
+Automizy: A marketing automation platform that's designed to streamline and enhance email marketing campaigns.
+ActiveCampaign: An integrated email marketing, marketing automation, and small business CRM.
+Eggplant's Digital Automation Intelligence: Primarily used for application testing, as well as GUI testing.
+ACCEL: Allows users to execute real-time tests as they build web applications. 
+//QuestionThree
+Cross-browser testing, also known as browser testing, is a quality assurance (QA) process that ensures a web application, site, or page works as intended across multiple browsers and devices. 
+//QuestionFour
+TDD is a development practice while BDD is a team methodology. In TDD, the developers write the tests while in BDD the automated specifications are created by users or testers (with developers wiring them to the code under test.) For small, co-located, developer-centric teams, TDD and BDD are effectively the same.
